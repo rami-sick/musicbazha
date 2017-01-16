@@ -51,10 +51,10 @@ class SoundCloudDownload:
          else:
             id3info['TITLE'] = title
             id3info['ARTIST'] = artist
-         print "\nID3 tags added"
+         print ("\nID3 tags added")
          bot.sendMessage(update.message.chat_id, text="\nID3 tags added")
       except InvalidTagError, err:
-         print "\nInvalid ID3 tag: {0}".format(err)
+         print ("\nInvalid ID3 tag: {0}".format(err))
    
    def downloadSongs(self):
       done = False
@@ -69,12 +69,12 @@ class SoundCloudDownload:
                   # reset download progress to report multiple track download progress correctly
                   self.download_progress = 0
                elif self.likes:
-                  print "File Exists"
+                  print ("File Exists")
                   done = True
                else:
-                  print "File Exists"
+                  print ("File Exists")
             except:
-               print "ERROR: Author has not set song to streamable, so it cannot be downloaded"
+               print ("ERROR: Author has not set song to streamable, so it cannot be downloaded")
    
 
 
@@ -117,12 +117,12 @@ def download(title, track_url):
                   # reset download progress to report multiple track download progress correctly
                   self.download_progress = 0
                elif self.likes:
-                  print "File Exists"
+                  print ("File Exists")
                   done = True
                else:
-                  print "File Exists"
+                  print ("File Exists")
             except:
-               print "ERROR: Author has not set song to streamable, so it cannot be downloaded"
+               print ("ERROR: Author has not set song to streamable, so it cannot be downloaded")
    
    def report(self, block_no, block_size, file_size):
       self.download_progress += block_size
@@ -146,7 +146,7 @@ def download(title, track_url):
 
 if __name__ == "__main__":
    if (int(requests.__version__[0]) == 0):
-      print "Your version of Requests needs updating\nTry: '(sudo) pip install -U requests'"
+      print ("Your version of Requests needs updating\nTry: '(sudo) pip install -U requests'")
       sys.exit()
 
 dp.add_handler(CommandHandler("start", start))
