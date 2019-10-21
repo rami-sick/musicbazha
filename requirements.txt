@@ -4,5 +4,5 @@ future==0.15.2
 pymysql==0.7.9
 python-telegram-bot==5.0.0
 sqlalchemy==1.0.15
-urllib3==1.16
+urllib3==1.24.2
 youtube-dl==2016.7.16
